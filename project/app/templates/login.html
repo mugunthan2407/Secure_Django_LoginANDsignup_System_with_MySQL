@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'bs/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+    <form action="{{ 'compare' }}" method="post" class="post-form">
+        {% csrf_token %}
+        <div class="container">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">User Id : </label>
+                <div class="col-sm-4">
+                    <input type="name" class="form-control" placeholder="Enter User Id" name="uid">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Contact Details : </label>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" placeholder="Enter Contact No" name="cno">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                <div class="col-sm-4">
+                    <input type="submit" value='compare'>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

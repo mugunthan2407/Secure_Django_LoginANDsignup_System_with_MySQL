@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'bs/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="container py-5 my-5" >
+        <h1  class="mt-5 text-success">Welcome to Singup Project </h1>
+        <a action="/login" type="button" class="btn btn-success m-5  text-decoration-none" href="/login">LogIn</a>
+        <a action="newuser" type="button" class=" btn btn-success m-5 text-decoration-none" href="newuser" >New User</a>
+    </div>
+</body>
+</html>
